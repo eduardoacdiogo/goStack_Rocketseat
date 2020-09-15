@@ -2,6 +2,10 @@ import React, { useState } from "react";
 
 import Header from "./components/Header";
 
+import backgroundImage from "./assets/background.jpeg";
+
+import "./app.css";
+
 export default function App() {
 	const [projects, setProjects] = useState([
 		"Desenvolvimento agil",
@@ -16,6 +20,7 @@ export default function App() {
 	return (
 		<>
 			<Header title="Homepage">
+				<img width={300} src={backgroundImage} alt="backgroundImage" />
 				<ul>
 					<li>Homepage</li>
 					<li>Projects</li>
