@@ -10,12 +10,16 @@
     "prettier/@typescript-eslint",
     "plugin:prettier/recommended"
   ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
     },
-    "ecmaVersion": 12,
+    "ecmaVersion": 2018,
     "sourceType": "module"
   },
   "plugins": [
@@ -25,6 +29,7 @@
     "prettier"
   ],
   "rules": {
+    "camelcase": "off",
     "react/jsx-one-expression-per-line": "off",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
@@ -37,10 +42,8 @@
       }
     ],
     "import/prefer-default-export": "off",
-    "camelcase": "off",
-    "@typescript-eslint/ban-types": "off",
-    "prettier/prettier": "error",
     "no-use-before-define": "off",
+    "prettier/prettier": "error",
     "import/extensions": [
       "error",
       "ignorePackages",
