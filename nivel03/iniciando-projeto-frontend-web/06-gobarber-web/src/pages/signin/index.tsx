@@ -45,13 +45,13 @@ const SignIn: React.FC = () => {
           email: data.email,
           password: data.password,
         });
-
-        // removeToast();
       } catch (err) {
         if (err instanceof Yup.ValidationError) {
           const errors = getValidationErrors(err);
 
           formRef.current?.setErrors(errors);
+
+          return;
         }
         addToast({
           type: 'error',
@@ -61,7 +61,7 @@ const SignIn: React.FC = () => {
         });
       }
     },
-    [signIn, addToast, removeToast],
+    [signIn, addToast],
   );
 
   return (
